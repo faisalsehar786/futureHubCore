@@ -1,0 +1,85 @@
+/* eslint-disable react/jsx-no-target-blank */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import {FC} from 'react'
+import {Link} from 'react-router-dom'
+import clsx from 'clsx'
+import {useLayout} from '../../core'
+import {KTSVG, toAbsoluteUrl} from '../../../helpers'
+import {AsideMenu} from './AsideMenu'
+import {Dropdown2} from '../../../partials'
+import { AsideSecondary } from './AsideSecondary'
+
+
+const AsideDefault: FC = () => {
+  const {classes} = useLayout() 
+  return (
+    <>
+    <div
+      id='kt_aside'
+      className={clsx('aside bg-white', classes.aside.join(' '))}
+      data-kt-drawer='true'
+      data-kt-drawer-name='aside'
+      data-kt-drawer-activate='{default: true, lg: false}'
+      data-kt-drawer-overlay='true'
+      data-kt-drawer-width='auto'
+      data-kt-drawer-direction='start'
+      data-kt-drawer-toggle='#kt_aside_toggle'
+    >
+      {/* begin::Logo */}
+      <div 
+        className='aside-logo d-none d-lg-flex flex-column align-items-center flex-column-auto py-4 logo-bottom-boarder'
+        id='kt_aside_logo'
+      >
+        <Link to='/dashboard'>
+          <img src={toAbsoluteUrl('/media/logos/logo-demo4.svg')} alt='logo' />
+        </Link>
+      </div>
+      {/* end::Logo */}
+
+      {/* begin::Nav */}
+      <div
+        className='asaside-nav d-flex flex-column align-lg-center flex-column-fluid w-100 pt-5 pt-lg-0'
+        id='kt_aside_nav'
+      >
+        <AsideMenu asideMenuCSSClasses={classes.asideMenu} />
+      </div>
+      {/* end::Nav */}
+
+      {/* begin::Footer */}
+      <div className='logo-bottom-boarder mb-3'></div>
+      <div
+        className='aside-footer d-flex flex-column align-items-center flex-column-auto'
+        id='kt_aside_footer'
+      >
+        
+        {/* begin::Menu */}
+        <div className='mb-7'>
+          <button
+            type='button'
+            className='btn btm-sm btn-icon btn-color-dark btn-active-color-info btn-active-light customVistedHoverButton'
+            data-kt-menu-trigger='click'
+            data-kt-menu-overflow='true'
+            data-kt-menu-placement='top-start'
+            data-bs-toggle='tooltip'
+            data-bs-placement='right'
+            data-bs-dismiss='click'
+            title='Quick actions'
+          >
+            <KTSVG
+              path='/media/icons/duotune/general/gen008.svg'
+              className='svg-icon-2 svg-icon-lg-1'
+            />
+          </button>
+          <Dropdown2 />
+        </div>
+        {/* end::Menu */}
+      </div>
+      {/* end::Footer */}
+    </div>
+    <AsideSecondary></AsideSecondary>
+             
+    </>
+  )
+}
+
+export {AsideDefault}

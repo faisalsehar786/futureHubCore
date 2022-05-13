@@ -1,0 +1,263 @@
+.authbgcolor{
+
+background: #001B5C !important;
+} 
+.authtext{
+color: #001B5C !important;
+
+}
+
+.bg-ch-header {
+
+    background: #F3F6F9 !important;
+}
+
+.logo-bottom-boarder {
+
+    border-bottom: 1px solid #EBECF3;
+}
+
+.aside-fixed .aside {
+    padding: 0px 8px;
+
+}
+
+.titleSubmenu {
+    padding: 0.65rem 1.65rem;
+}
+
+.menu-item .menu-link .menu-arrow {
+
+    margin-left: 2.5rem
+}
+
+
+.btn.btn-active-light:hover:not(.btn-active),
+.btn.btn-active-light:active:not(.btn-active) {
+    background: $cutom-hover-menue-btn  !important;
+}
+
+
+
+.menue-drawrCustom {
+    border-right: 1px solid #EBECF3;
+
+}
+
+.aside {
+    border-right: 1px solid #EBECF3;
+}
+
+.header-fixed .header {
+    border-bottom: 1px solid #EBECF3;
+}
+
+.fsatollenav {
+    left: 315px;
+    top: 31px;
+    position: fixed;
+    z-index: 1;
+}
+
+.fsatollenavclose {
+    left: 74px;
+    top: 78px;
+    position: fixed;
+    z-index: 1;
+    display: none!important;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+    /* CSS */
+
+    .header-fixed .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+      
+    }
+    .menue-drawrCustom{
+    
+        position: fixed;
+        left: 65px;
+        background: white;
+        
+        width:300px;
+        height: 100vh;
+    
+    }
+
+
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+   
+
+    .header-fixed .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+      
+    }
+    .menue-drawrCustom{
+    
+        position: fixed;
+        left: 65px;
+        background: white;
+        width:300px;
+        height: 100vh;
+    
+    }
+
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .fsatollenav,
+    .fsatollenavclose {
+        display: none !important;
+    }
+
+    .content {
+        margin-left: 0px !important;
+    }
+
+    .header-fixed .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+         left: 0!important;
+    }
+    .menue-drawrCustom{
+    
+        position: fixed;
+        left: 62px;
+        z-index: 400;
+        background: white;
+        width: 263px;
+        height: 100vh;
+        display: none !important;
+    
+    }
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .fsatollenav,
+    .fsatollenavclose {
+        display: none !important;
+    }
+
+    .content {
+        margin-left: 0px !important;
+    }
+
+    .header-fixed .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+         left: 0!important;
+    }
+    .menue-drawrCustom{
+    
+        position: fixed;
+        left: 62px;
+        z-index: 400;
+        background: white;
+        width: 263px;
+        height: 100vh;
+        display: none !important;
+    
+    }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .fsatollenav,
+    .fsatollenavclose {
+        display: none !important;
+    }
+
+    .content {
+        margin-left: 0px !important;
+    }
+    .header-fixed .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+         left: 0!important;
+    }
+    .menue-drawrCustom{
+    
+        position: fixed;
+        left: 62px;
+        z-index: 400;
+        background: white;
+        width: 263px;
+        height: 100vh;
+        display: none!important;
+    
+    }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .fsatollenav,
+    .fsatollenavclose {
+        display: none !important;
+    }
+
+    .content {
+        margin-left: 0px !important;
+    }
+    .header-fixed .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+         left: 0!important;
+    }
+    .menue-drawrCustom{
+    
+        position: fixed;
+        left: 62px;
+        z-index: 400;
+        background: white;
+        width: 263px;
+        height: 100vh;
+        display: none !important;
+    
+    }
+}
